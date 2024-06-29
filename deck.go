@@ -11,7 +11,10 @@ func (d deck) printDeck() {
 	// }
 
 	for i := 0; i < len(d); i++ {
-		fmt.Println(d[i])
+		fmt.Print(d[i] + " ## ")
+		if i == len(d)-1 {
+			fmt.Println()
+		}
 	}
 }
 
@@ -22,8 +25,8 @@ func (d deck) printDeck() {
 func getNewDeck() deck {
 	cards := deck{}
 
-	suits := deck{"Spade", "Heart", "Hiamond", "Club"}
-	values := deck{"Ace", "King", "Queen", "Jack"}
+	suits := deck{"Spade", "Heart"}
+	values := deck{"Ace", "King"}
 
 	for i := 0; i < len(suits); i++ {
 		for j := 0; j < len(values); j++ {
@@ -31,4 +34,8 @@ func getNewDeck() deck {
 		}
 	}
 	return cards
+}
+
+func deal(d deck, handSize int) (deck, deck) {
+	return d[:handSize], d[handSize:]
 }

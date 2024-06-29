@@ -8,10 +8,8 @@
             "name": "Launch Package",
             "type": "go",
             "request": "launch",
-            "mode": "debug",
-            "host": "127.0.0.1",
-            "port": 8080,
-            "program": "cards.go"
+            "mode": "auto",
+            "program": "${fileDirname}"
         }
     ]
 }
