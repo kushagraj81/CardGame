@@ -1,15 +1,6 @@
 package main
 
-import "fmt"
-
 func main() {
-
-	deckOfCard := deck{}
-	deckOfCard = append(deckOfCard, "king")
-	deckOfCard = append(deckOfCard, "Queen")
-	deckOfCard = append(deckOfCard, "jack")
-
+	deckOfCard := getNewDeck()
 	deckOfCard.printDeck()
-	fmt.Print("hello Kushagra")
-
 }
