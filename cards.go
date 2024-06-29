@@ -9,8 +9,7 @@ func main() {
 	deckOfCard = append(deckOfCard, "Queen")
 	deckOfCard = append(deckOfCard, "jack")
 
-	printDeck(deckOfCard)
-
+	deckOfCard.printDeck()
 	fmt.Print("hello Kushagra")
 
 }
